@@ -27,7 +27,7 @@ const generateResponse = (chatElement) => {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "http://localhost:5500"
+            "Access-Control-Allow-Origin": "https://medibot-three.vercel.app/"
             // "Authorization": `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
