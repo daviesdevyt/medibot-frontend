@@ -1,0 +1,30 @@
+<footer data-bs-theme="light" >
+		
+        <form class="d-flex" role="send-get" >
+          <input class="form-control me-2" type="search" placeholder="Ask a question" aria-label="Ask a question">
+          <button class="btn btn-outline-success" type="submit">Enter</button>
+        </form>
+      
+</footer>		
+	
+	#bottom {position:absolute; bottom:0; padding-bottom:2em; width:100%; padding-left: 4em; } 
+	navbar navbar-expand-md navbar-dark fixed-top bg-dark
+	
+
+chatInput.addEventListener("input", () => {
+    // Adjust the height of the input textarea based on its content
+    chatInput.style.height = `${inputInitHeight}px`;
+    chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+    // If Enter key is pressed without Shift key and the window 
+    // width is greater than 800px, handle the chat
+    if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+        e.preventDefault();
+   
+    }
+});
+
+
+const inputInitHeight = chatInput.scrollHeight;
